@@ -3,7 +3,6 @@
 from abc import ABC, abstractmethod
 
 
-# pylint: disable=too-few-public-methods
 class FiguraGeometrica(ABC):
     """Clase abstracta que define la interfaz para calcular áreas."""
     def __init__(self, base=None, altura=None):
@@ -15,7 +14,7 @@ class FiguraGeometrica(ABC):
         """Método abstracto para calcular el área de una figura."""
 
 
-# pylint: disable=too-few-public-methods
+
 class Rectangulo(FiguraGeometrica):
     """Clase para calcular el área de un rectángulo."""
     def __init__(self, base, altura):
@@ -25,7 +24,7 @@ class Rectangulo(FiguraGeometrica):
         return self.base * self.altura
 
 
-# pylint: disable=too-few-public-methods
+
 class Triangulo(FiguraGeometrica):
     """Clase para calcular el área de un triángulo."""
     def __init__(self, base, altura):
@@ -35,7 +34,7 @@ class Triangulo(FiguraGeometrica):
         return (self.base * self.altura) / 2
 
 
-# pylint: disable=too-few-public-methods
+
 class Circulo(FiguraGeometrica):
     """Clase para calcular el área de un círculo."""
     def __init__(self, radio):
@@ -47,14 +46,14 @@ class Circulo(FiguraGeometrica):
         return self.pi * (self.radio ** 2)
 
 
-# Variables globales
+
 BASE_RECTANGULO = 10
 ALTURA_RECTANGULO = 5
 BASE_TRIANGULO = 7
 ALTURA_TRIANGULO = 4
 RADIO_CIRCULO = 3
 
-# Ejecución principal
+
 if __name__ == "__main__":
     rectangulo = Rectangulo(BASE_RECTANGULO, ALTURA_RECTANGULO)
     triangulo = Triangulo(BASE_TRIANGULO, ALTURA_TRIANGULO)
